@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Starlight]]></title>
+        <description><![CDATA[Starlight]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Mon, 04 Jan 2016 18:33:24 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[We, the officers of Starlight hold ourselves to
+these standards]]></title>
+            <description><![CDATA[<article><h1>We, the officers of Starlight hold ourselves to
+these standards</h1><p></p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/18c32938-dccf-4d3c-8190-f4fde27c2093.jpg"></article>]]></description>
+            <link>undefinedwe-the-officers-of-starlight-hold-ourselves-to-these-standa/index.html</link>
+            <guid isPermaLink="false">be2a9d59-4b67-417d-b0b6-e67983554977</guid>
+            <pubDate>Mon, 04 Jan 2016 18:33:23 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
