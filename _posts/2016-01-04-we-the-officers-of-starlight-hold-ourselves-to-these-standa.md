@@ -6,8 +6,8 @@ inLanguage: null
 starred: true
 keywords: []
 description: Expectations to the officers
-datePublished: '2016-01-04T19:12:53.178Z'
-dateModified: '2016-01-04T19:12:45.753Z'
+datePublished: '2016-01-04T19:16:29.995Z'
+dateModified: '2016-01-04T19:15:43.591Z'
 title: Expectations
 author: []
 sourcePath: _posts/2016-01-04-we-the-officers-of-starlight-hold-ourselves-to-these-standa.md
