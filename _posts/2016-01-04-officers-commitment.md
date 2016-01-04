@@ -6,9 +6,9 @@ inLanguage: null
 starred: false
 keywords: []
 description: What do an officer in Starlight commit to do
-datePublished: '2016-01-04T12:33:34.037Z'
-dateModified: '2016-01-04T12:31:27.697Z'
-title: 'Officers commitments '
+datePublished: '2016-01-04T12:36:28.817Z'
+dateModified: '2016-01-04T12:36:23.905Z'
+title: Officer commitments
 author: []
 sourcePath: _posts/2016-01-04-officers-commitment.md
 published: true
@@ -22,10 +22,10 @@ url: officers-commitment/index.html
 _type: Article
 
 ---
-![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg)
+# **Officer commitments**
 
-We, the officer of
-Starlight are:
+**We, the officer of
+Starlight are:**
 
 **Understanding **- that key
 in our role as an officer is to make Starlight feel like a community where it
@@ -62,3 +62,4 @@ guild member to take.
 criticism and lear**n -- you make it easy for people to express any criticism and
 summarise to show you've heard what they have to say -- and take this away to
 reflect on.
+![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg)
