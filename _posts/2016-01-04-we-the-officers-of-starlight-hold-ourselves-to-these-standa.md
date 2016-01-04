@@ -6,8 +6,8 @@ inLanguage: null
 starred: true
 keywords: []
 description: Expectations to the officers
-datePublished: '2016-01-04T18:46:01.608Z'
-dateModified: '2016-01-04T18:45:55.344Z'
+datePublished: '2016-01-04T18:56:03.508Z'
+dateModified: '2016-01-04T18:53:11.065Z'
 title: |-
   We, the officers of Starlight hold ourselves to
   these standards
