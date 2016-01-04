@@ -3,11 +3,11 @@ inFeed: true
 hasPage: true
 inNav: false
 inLanguage: null
-starred: false
+starred: true
 keywords: []
 description: What do an officer in Starlight commit to do
-datePublished: '2016-01-04T12:36:28.817Z'
-dateModified: '2016-01-04T12:36:23.905Z'
+datePublished: '2016-01-04T12:37:40.239Z'
+dateModified: '2016-01-04T12:37:35.738Z'
 title: Officer commitments
 author: []
 sourcePath: _posts/2016-01-04-officers-commitment.md
