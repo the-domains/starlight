@@ -3,23 +3,23 @@ inFeed: true
 hasPage: true
 inNav: true
 inLanguage: null
-starred: false
+starred: true
 keywords: []
 description: Expectations to the officers
-datePublished: '2016-01-04T18:33:23.790Z'
-dateModified: '2016-01-04T18:33:12.726Z'
+datePublished: '2016-01-04T18:46:01.608Z'
+dateModified: '2016-01-04T18:45:55.344Z'
 title: |-
   We, the officers of Starlight hold ourselves to
   these standards
 author: []
+sourcePath: _posts/2016-01-04-we-the-officers-of-starlight-hold-ourselves-to-these-standa.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2016-01-04-we-the-officers-of-starlight-hold-ourselves-to-these-standa.md
-published: true
 url: we-the-officers-of-starlight-hold-ourselves-to-these-standa/index.html
 _type: Article
 
