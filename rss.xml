@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Starlight]]></title>
+        <description><![CDATA[Starlight]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Mon, 04 Jan 2016 12:08:38 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Officers commitment ]]></title>
+            <description><![CDATA[<article><h1>Officers commitment </h1><p>We, the officer of
+Starlight are:</p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/5d4f2b2e-664f-4955-917b-c513e51e65d2.jpg"></article>]]></description>
+            <link>undefinedofficers-commitment/index.html</link>
+            <guid isPermaLink="false">bcd9c80c-6f2a-465a-bb04-385b8c765141</guid>
+            <pubDate>Mon, 04 Jan 2016 12:08:38 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
