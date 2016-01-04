@@ -2,18 +2,18 @@
     <channel>
         <title><![CDATA[Starlight]]></title>
         <description><![CDATA[Starlight]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://thegrid.ai/starlight/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Mon, 04 Jan 2016 17:10:18 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 04 Jan 2016 17:28:12 GMT</lastBuildDate>
+        <atom:link href="https://thegrid.ai/starlight/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[We, the
-officer of Starlight are:]]></title>
+officers of Starlight are:]]></title>
             <description><![CDATA[<article><h1>We, the
-officer of Starlight are:</h1><p></p></article>]]></description>
-            <link>undefinedwe-the-officer-of-starlight-are/index.html</link>
+officers of Starlight are:</h1><p></p></article>]]></description>
+            <link>https://thegrid.ai/starlight/we-the-officer-of-starlight-are/index.html</link>
             <guid isPermaLink="false">64ae64b2-be15-40eb-9310-0d890d898b80</guid>
-            <pubDate>Mon, 04 Jan 2016 17:10:06 GMT</pubDate>
+            <pubDate>Mon, 04 Jan 2016 17:28:11 GMT</pubDate>
         </item>
     </channel>
 </rss>
