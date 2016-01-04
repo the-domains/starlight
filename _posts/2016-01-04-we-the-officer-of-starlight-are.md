@@ -6,26 +6,26 @@ inLanguage: null
 starred: true
 keywords: []
 description: Of the officers
-datePublished: '2016-01-04T17:10:06.644Z'
-dateModified: '2016-01-04T17:09:54.105Z'
+datePublished: '2016-01-04T17:28:11.379Z'
+dateModified: '2016-01-04T17:28:04.388Z'
 title: |-
   We, the
-  officer of Starlight are:
+  officers of Starlight are:
 author: []
+sourcePath: _posts/2016-01-04-we-the-officer-of-starlight-are.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2016-01-04-we-the-officer-of-starlight-are.md
-published: true
 url: we-the-officer-of-starlight-are/index.html
 _type: Article
 
 ---
 # We, the
-officer of Starlight are:
+officers of Starlight are:
 
 ****
 
