@@ -6,9 +6,9 @@ inLanguage: null
 starred: false
 keywords: []
 description: What do an officer in Starlight commit to do
-datePublished: '2016-01-04T12:30:00.653Z'
-dateModified: '2016-01-04T12:29:56.052Z'
-title: 'Officers commitment '
+datePublished: '2016-01-04T12:33:34.037Z'
+dateModified: '2016-01-04T12:31:27.697Z'
+title: 'Officers commitments '
 author: []
 sourcePath: _posts/2016-01-04-officers-commitment.md
 published: true
