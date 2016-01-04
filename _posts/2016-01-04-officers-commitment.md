@@ -1,28 +1,28 @@
 ---
 inFeed: true
 hasPage: true
-inNav: true
+inNav: false
 inLanguage: null
 starred: false
 keywords: []
 description: What do an officer in Starlight commit to do
-datePublished: '2016-01-04T12:08:38.155Z'
-dateModified: '2016-01-04T12:08:26.365Z'
+datePublished: '2016-01-04T12:30:00.653Z'
+dateModified: '2016-01-04T12:29:56.052Z'
 title: 'Officers commitment '
 author: []
+sourcePath: _posts/2016-01-04-officers-commitment.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2016-01-04-officers-commitment.md
-published: true
 url: officers-commitment/index.html
 _type: Article
 
 ---
-![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/5d4f2b2e-664f-4955-917b-c513e51e65d2.jpg)
+![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg)
 
 We, the officer of
 Starlight are:
