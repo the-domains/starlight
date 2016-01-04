@@ -2,17 +2,17 @@
     <channel>
         <title><![CDATA[Starlight]]></title>
         <description><![CDATA[Starlight]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>https://thegrid.ai/starlight/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Mon, 04 Jan 2016 12:08:38 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 04 Jan 2016 12:30:13 GMT</lastBuildDate>
+        <atom:link href="https://thegrid.ai/starlight/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Officers commitment ]]></title>
             <description><![CDATA[<article><h1>Officers commitment </h1><p>We, the officer of
-Starlight are:</p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/5d4f2b2e-664f-4955-917b-c513e51e65d2.jpg"></article>]]></description>
-            <link>undefinedofficers-commitment/index.html</link>
+Starlight are:</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg"></article>]]></description>
+            <link>https://thegrid.ai/starlight/officers-commitment/index.html</link>
             <guid isPermaLink="false">bcd9c80c-6f2a-465a-bb04-385b8c765141</guid>
-            <pubDate>Mon, 04 Jan 2016 12:08:38 GMT</pubDate>
+            <pubDate>Mon, 04 Jan 2016 12:30:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
