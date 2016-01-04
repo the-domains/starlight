@@ -1,6 +1,6 @@
 name: Starlight
 favicon: null
-layout_spectrum: 0.0666687823832035
+layout_spectrum: 0.80398
 typography_spectrum: 0.3242965927347541
 cta:
   domain: null
@@ -16,12 +16,12 @@ opengraph:
   appId: null
 color:
   brandColors:
-    - '#17BEBB'
-    - '#2E282A'
-    - '#CD5334'
-    - '#EDB88B'
-    - '#FAD8D6'
-  brandStrength: 0.8619312054943293
+    - '#000228'
+    - '#234d7f'
+    - '#408cab'
+    - '#85c5f5'
+    - '#feffa7'
+  brandStrength: 0.5
   lightness: 0.013377540512010455
   saturation: 0.49002967472188175
   rhythmicContrast: 0.15293103572912514
