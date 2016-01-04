@@ -6,9 +6,9 @@ inLanguage: null
 starred: true
 keywords: []
 description: Expectations to the officers
-datePublished: '2016-01-04T19:16:29.995Z'
-dateModified: '2016-01-04T19:15:43.591Z'
-title: Expectations
+datePublished: '2016-01-04T20:28:11.619Z'
+dateModified: '2016-01-04T20:27:59.110Z'
+title: "Expectations\_"
 author: []
 sourcePath: _posts/2016-01-04-we-the-officers-of-starlight-hold-ourselves-to-these-standa.md
 published: true
@@ -22,7 +22,7 @@ url: we-the-officers-of-starlight-hold-ourselves-to-these-standa/index.html
 _type: Article
 
 ---
-![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/18c32938-dccf-4d3c-8190-f4fde27c2093.jpg)
+# Expectations ![](https://the-grid-user-content.s3-us-west-2.amazonaws.com/18c32938-dccf-4d3c-8190-f4fde27c2093.jpg)
 
 We, the officers of Starlight hold ourselves to
 these standards
