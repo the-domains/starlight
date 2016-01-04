@@ -6,8 +6,8 @@ inLanguage: null
 starred: true
 keywords: []
 description: What do an officer in Starlight commit to do
-datePublished: '2016-01-04T12:37:40.239Z'
-dateModified: '2016-01-04T12:37:35.738Z'
+datePublished: '2016-01-04T12:39:35.936Z'
+dateModified: '2016-01-04T12:39:28.829Z'
 title: Officer commitments
 author: []
 sourcePath: _posts/2016-01-04-officers-commitment.md
@@ -23,6 +23,7 @@ _type: Article
 
 ---
 # **Officer commitments**
+![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg)
 
 **We, the officer of
 Starlight are:**
@@ -34,8 +35,8 @@ got to set the in character views on the side-line, so we can defuse a
 situation. 
 
 **United **- You are up
-front when you disagree and will argue your views among the officers (eg in
-officer hat), but once a decision has been made you publicly support this as a
+front when you disagree and will argue your views among the officers (e.g. in
+officer chat), but once a decision has been made you publicly support this as a
 member of the management team.
 
 You
@@ -48,11 +49,6 @@ character development and to grow their characters. As officers we to should
 seek to let our characters grow, change and react to what happens to our
 characters 
 
-**Participating **-when online on the officer character, s/he
-should always be approachable IC and OOC. This does not mean that an officer
-should always be in character, in a public place. But rather that s/he can be
-reached. 
-
 **Someone who see the best in people**
 -- never lose sight of a person's great qualities, give recognition and
 appreciation generously, raise issues in a respectful way that is easy for the
@@ -62,4 +58,3 @@ guild member to take.
 criticism and lear**n -- you make it easy for people to express any criticism and
 summarise to show you've heard what they have to say -- and take this away to
 reflect on.
-![](https://s3-us-west-2.amazonaws.com/the-grid-img/p/65648412f73fcfb34d2b043f73ba9f8e731b6364.jpg)
