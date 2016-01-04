@@ -4,15 +4,8 @@
         <description><![CDATA[Starlight]]></description>
         <link>https://thegrid.ai/starlight/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Mon, 04 Jan 2016 18:43:38 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 04 Jan 2016 18:46:24 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/starlight/rss.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Officers role]]></title>
-            <description><![CDATA[<article><h1>Officers role</h1><p>What is the role of the Starlight leadership team?</p><img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/41c416b1-12cd-4980-912f-351e4b8b3754.jpg"></article>]]></description>
-            <link>https://thegrid.ai/starlight/officers-role/index.html</link>
-            <guid isPermaLink="false">e821aee2-05b4-4e97-b753-580d564fc407</guid>
-            <pubDate>Mon, 04 Jan 2016 18:43:37 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[We, the officers of Starlight hold ourselves to
 these standards]]></title>
@@ -20,7 +13,14 @@ these standards]]></title>
 these standards</h1><p></p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/a796364aad78eacdf75d6e8e1d01ca4fae9db643.jpg"></article>]]></description>
             <link>https://thegrid.ai/starlight/we-the-officers-of-starlight-hold-ourselves-to-these-standa/index.html</link>
             <guid isPermaLink="false">be2a9d59-4b67-417d-b0b6-e67983554977</guid>
-            <pubDate>Mon, 04 Jan 2016 18:33:23 GMT</pubDate>
+            <pubDate>Mon, 04 Jan 2016 18:46:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Officers role]]></title>
+            <description><![CDATA[<article><h1>Officers role</h1><p>What is the role of the Starlight leadership team?</p><img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/9713f651e056c8a1d468aba0f0a8dbf3ece88694.jpg"></article>]]></description>
+            <link>https://thegrid.ai/starlight/officers-role/index.html</link>
+            <guid isPermaLink="false">e821aee2-05b4-4e97-b753-580d564fc407</guid>
+            <pubDate>Mon, 04 Jan 2016 18:43:37 GMT</pubDate>
         </item>
     </channel>
 </rss>
