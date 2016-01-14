@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Expectations  - Starlight</title><link href="../rss.xml" title="Starlight feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.16.25"><meta name="the-grid-solution" content="933858bf-a3f0-4f61-adab-9608596e2000"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Expectations  - Starlight</title><link href="../rss.xml" title="Starlight feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="4c247747-e965-4264-a14d-ee21d1c513f2"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -202,6 +202,14 @@ body {
 }
 .stack {
   z-index: 1;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+.group,
+.aside,
+.decoration {
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -250,6 +258,9 @@ a:active {
   transition: color 0.1s ease-in, background-color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-out;
 }
+a.aside {
+  display: inline-block;
+}
 html.exporting a {
   transition: none;
 }
@@ -259,11 +270,21 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
+.media iframe {
+  transition: 0.3s opacity ease-in;
+  -webkit-transition: 0.3s opacity ease-in;
+}
 h1 a,
 h2 a,
 h3 a {
   font-weight: inherit;
   letter-spacing: inherit;
+}
+a {
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .text-decoration {
   -webkit-box-decoration-break: clone;
@@ -277,36 +298,50 @@ h3 a {
   margin-left: 1.5em;
 }
 .decoration {
-  position: relative;
   pointer-events: none;
+}
+.svg {
+  position: relative;
   background-color: currentColor;
 }
-.decoration > svg {
+.svg > svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.decoration.connector > svg {
+.svg.connector > svg {
   width: 109%;
   height: 109%;
   margin-left: -2%;
 }
-.decoration path,
-.decoration ellipse,
-.decoration rect,
-.decoration polygon,
-.decoration circle {
+.svg path,
+.svg ellipse,
+.svg rect,
+.svg polygon,
+.svg circle {
   fill: currentColor;
 }
-.decoration mpath,
-.decoration line,
-.decoration polyline {
+.svg mpath,
+.svg line,
+.svg polyline {
   stroke: currentColor;
 }
-.svg.decoration {
+.svg {
   background-color: transparent;
+}
+.revealed .play.svg:after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-color: currentColor;
+  content: "";
 }
 .colors-style-aside-border .publisher,
 .colors-style-aside-border .author {
@@ -455,7 +490,8 @@ ul {
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 4.324rem; position: absolute; left: 0.124rem; top: 4.064rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.784rem; line-height: 0.624rem; padding-top: 0.084rem; padding-right: 0.054rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -570,13 +606,14 @@ display: none;
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed { text-align: left; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed{font-size: 0.164rem; line-height: 0.244rem; height: 7.814rem; width: 6.844rem; position: absolute; top: 0.364rem; left: 0.184rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 6.334rem; height: 4.804rem; position: absolute; top: 0.764rem; left: 0.264rem;}
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 6.334rem; height: 4.804rem; position: absolute; top: 0.764rem; left: 0.184rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img{height: 4.814rem; width: 6.334rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 6.484rem; position: absolute; left: 0.184rem; top: 5.634rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.784rem; line-height: 0.624rem; padding-top: 0.084rem; padding-right: 0.054rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -685,13 +722,14 @@ display: none;
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed { text-align: left; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed{font-size: 0.164rem; line-height: 0.244rem; height: 7.424rem; width: 7.684rem; position: absolute; top: 0.484rem; left: 0.964rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 4.324rem; height: 3.284rem; position: absolute; top: 0.844rem; left: 1.684rem;}
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 4.324rem; height: 3.284rem; position: absolute; top: 0.844rem; left: 1.444rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img{height: 3.284rem; width: 4.324rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 4.324rem; position: absolute; top: 0.064rem; left: 1.684rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 4.324rem; position: absolute; left: 1.684rem; top: 4.224rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.784rem; line-height: 0.624rem; padding-top: 0.084rem; padding-right: 0.054rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -801,13 +839,14 @@ display: none;
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed { text-align: left; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed{font-size: 0.164rem; line-height: 0.244rem; height: 8.254rem; width: 11.524rem; position: absolute; top: 0.724rem; left: 1.444rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 6.484rem; height: 4.924rem; position: absolute; top: 0.924rem; left: 2.524rem;}
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 6.484rem; height: 4.924rem; position: absolute; top: 0.924rem; left: 2.164rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img{height: 4.924rem; width: 6.484rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 6.484rem; position: absolute; top: 0.094rem; left: 2.524rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.164rem; line-height: 0.244rem; width: 6.484rem; position: absolute; left: 2.524rem; top: 5.984rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.784rem; line-height: 0.624rem; padding-top: 0.084rem; padding-right: 0.054rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.244rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -917,13 +956,14 @@ display: none;
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed { text-align: left; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed{font-size: 0.204rem; line-height: 0.304rem; height: 10.304rem; width: 14.404rem; position: absolute; top: 0.904rem; left: 1.804rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 8.104rem; height: 6.154rem; position: absolute; top: 1.154rem; left: 3.154rem;}
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 8.104rem; height: 6.154rem; position: absolute; top: 1.154rem; left: 2.704rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img{height: 6.154rem; width: 8.104rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline{font-size: 0.654rem; line-height: 0.854rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.154rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.204rem; line-height: 0.304rem; width: 8.104rem; position: absolute; left: 3.154rem; top: 7.474rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.984rem; line-height: 0.774rem; padding-top: 0.104rem; padding-right: 0.064rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.304rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -1033,13 +1073,14 @@ display: none;
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed >.text.paragraph p:first-child .first-letter { float: left; font-weight: bold; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 >.group.mixed { text-align: left; }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed{font-size: 0.154rem; line-height: 0.234rem; height: 9.014rem; width: 14.414rem; position: absolute; top: 0.904rem; left: 1.804rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 8.104rem; height: 6.154rem; position: absolute; top: 0.944rem; left: 3.164rem;}
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover{overflow: hidden; width: 8.104rem; height: 6.154rem; position: absolute; top: 0.944rem; left: 2.704rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img{height: 6.154rem; width: 8.104rem; position: absolute; top: 0rem; left: 0rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline{font-size: 0.494rem; line-height: 0.644rem; width: 8.104rem; position: absolute; top: 0.124rem; left: 3.164rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph{font-size: 0.154rem; line-height: 0.234rem; width: 8.104rem; position: absolute; left: 3.164rem; top: 7.264rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(1)>span:nth-of-type(1){font-size: 0.744rem; line-height: 0.584rem; padding-top: 0.084rem; padding-right: 0.054rem;}
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph>p:nth-of-type(2){margin-top: 0.234rem;}
-#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .media.cover { background-image: linear-gradient(rgb(18, 14, 11), rgb(245, 242, 239)); color: rgb(13, 21, 93); }
+#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed :hover.media.cover { color: rgb(23, 18, 14); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline { color: rgb(234, 228, 225); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .title.headline a:hover { color: rgb(162, 163, 186); }
 #u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968#u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968 .group.mixed > .text.paragraph { color: rgb(245, 242, 239); }
@@ -1132,7 +1173,7 @@ display: none;
             </g>
         </g>
     </g>
-</svg></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_decoration w_cover w_media w_headline w_title w_paragraph w_text media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text stack mixed" itemid="5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968" itemtype="text" diff_index="0" index="mixed" kind="stack" score="8.75" missed="0.25" tag="article" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968"><div kind="group" index="mixed" class="group mixed group mixed" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="983" max-height="746" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/2794068563b27ac350087d7198d384b96c31bdce.jpg" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover"><picture id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3ed2dccdff1c90f986753e2bef35b5fe/passthrough.jpg?height=615&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=810, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3ed2dccdff1c90f986753e2bef35b5fe/passthrough.jpg?height=615&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=810, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/df71c56dc02ab922b5d0500e35ce820e/passthrough.jpg?height=328&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=432, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ed4d282c08a5de926e5abf63db678223/passthrough.jpg?height=656&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=864 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3585fa3edc1db6e458e53b636e2cb4e2/passthrough.jpg?height=492&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=648, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/df71c56dc02ab922b5d0500e35ce820e/passthrough.jpg?height=328&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=432, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ed4d282c08a5de926e5abf63db678223/passthrough.jpg?height=656&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=864 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e236e0d043f3af3bb110365c13f6e442/passthrough.jpg?height=481&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=633, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline"><span class="text-decoration" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline-span">Expectations</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph"><p><span class="first-letter">W</span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>e, the officers of Starlight hold ourselves to <wbr class="w480 w960"></wbr>these standards</p><p><b data-grid-id="723c9aff-fa28-462a-b7fe-c9f467acf166"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Holding the community</b> - Our key role as an officer is <wbr class="w480 w960"></wbr>to make <wbr class="w481 w961 w1799"></wbr>members feel that Starlight is a safe <wbr class="w480 w960 w1800"></wbr>community, both in and out of character. <wbr class="w481 w961"></wbr>Officers <wbr class="w480 w960 w1799"></wbr>always need to ask themselves &#x201C;Does this situation <wbr class="w480 w960"></wbr>need me to <wbr class="w1800"></wbr>be an <wbr class="w481 w961"></wbr>officer or a <wbr class="w1799"></wbr>player, to resolve this <wbr class="w480 w960"></wbr>situation well?&#x201D; There will be situations where <wbr class="w481 w961"></wbr>we have <wbr class="w480 w960"></wbr>to set our <wbr class="w1799"></wbr>own <wbr class="w1800"></wbr>personal or in-character reactions to <wbr class="w480 w960"></wbr>one side, so that we <wbr class="w481 w961"></wbr>can defuse a situation. <wbr class="w1799"></wbr>We will also <wbr class="w480 w960"></wbr>always ensure that <wbr class="w1800"></wbr>while a storyline can be <wbr class="w481 w961"></wbr>negative, <wbr class="w480 w960"></wbr>the players should <wbr class="w1799"></wbr>always feel secure within Starlight.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b262be89-7ff7-4231-b8f7-a775e75c5d08" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08"><div kind="group" index="column" class="group column group column" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08-g-column-t-paragraph"><p><b data-grid-id="e85d2a2b-b05c-4da6-ae12-5c25e345aaa4">United </b>- As officers we should actively share <wbr class="w480 w960"></wbr>knowledge, experiences and <wbr class="w481 w961 w1799"></wbr>information, so that we <wbr class="w480 w960"></wbr>are all acting <wbr class="w1800"></wbr>from a common basis of knowledge. As <wbr class="w480 w481 w960 w961"></wbr>officers <wbr class="w1799"></wbr>we need to be frank and upfront in arguing <wbr class="w480 w960"></wbr>our views among <wbr class="w1800"></wbr>ourselves <wbr class="w481 w961"></wbr>(eg in officer <wbr class="w1799"></wbr>chat), but <wbr class="w480 w960"></wbr>once a decision has been made we will all publicly <wbr class="w480 w960"></wbr>support <wbr class="w481 w961"></wbr>this as a member <wbr class="w1799"></wbr>of <wbr class="w1800"></wbr>the management team. <wbr class="w480 w960"></wbr>We will always build our fellow <wbr class="w481 w961"></wbr>officers and never <wbr class="w480 w960 w1799"></wbr>undermine their authority or <wbr class="w1800"></wbr>decisions by public <wbr class="w480 w960"></wbr>dissent. We <wbr class="w481 w961"></wbr>seek support within the <wbr class="w1799"></wbr>officer group <wbr class="w480 w960"></wbr>rather than take annoyances outside and <wbr class="w481 w961 w1800"></wbr>involving <wbr class="w480 w960"></wbr>guild members.</p><p><b data-grid-id="d61b34ab-31d7-482c-92a5-fba7eb536307"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Role-modelling the values of Starlight RP </b>- for <wbr class="w480 w960"></wbr>example, one of the core beliefs of <wbr class="w481 w961 w1799"></wbr>Starlight is that we <wbr class="w480 w960"></wbr>seek <wbr class="w1800"></wbr>roleplayers who are committed to character <wbr class="w480 w960"></wbr>development <wbr class="w481 w961"></wbr>and <wbr class="w1799"></wbr>to grow their characters. Our <wbr class="w480 w960"></wbr>characters should <wbr class="w1800"></wbr>model this behaviour.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="77f583b9-2354-4a26-8389-ca0c5671d433" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-77f583b9-2354-4a26-8389-ca0c5671d433"><div kind="group" index="column" class="group column group column" id="u-77f583b9-2354-4a26-8389-ca0c5671d433-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-77f583b9-2354-4a26-8389-ca0c5671d433-g-column-t-paragraph"><p><b data-grid-id="2c5d98c3-edab-401b-9f7e-6d819761baa7">Participating </b>- when online on the officer character, <wbr class="w480 w960"></wbr>s/he should always be <wbr class="w481 w961 w1799"></wbr>approachable IC and OOC. This <wbr class="w480 w960"></wbr>does <wbr class="w1800"></wbr>not mean that an officer should always be in <wbr class="w480 w481 w960 w961 w1799"></wbr>character, in a public place, but rather that s/he can be <wbr class="w480 w960"></wbr>reached.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t is expected that an officer regularly takes part in the <wbr class="w480 w960"></wbr>role-play within Starlight on <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>character s/he is an <wbr class="w480 w960 w1800"></wbr>officer with. Officers will also spend time on the ooc <wbr class="w480 w960"></wbr>work <wbr class="w481 w961"></wbr>needed <wbr class="w1799"></wbr>for the guild to thrive - for example, in <wbr class="w480 w960"></wbr>offline <wbr class="w1800"></wbr>discussions on recruitment <wbr class="w481 w961"></wbr>strategy, <wbr class="w480 w960 w1799"></wbr>disciplinary action, setting direction and making <wbr class="w480 w960"></wbr>choices. Every officer <wbr class="w481 w961 w1800"></wbr>needs to <wbr class="w1799"></wbr>express their view and <wbr class="w480 w960"></wbr>vote when needed.</p><p><b data-grid-id="eb7fb5eb-226a-474a-8a9f-d50d67306bd4"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Seeing the best in people &#x2013; </b>as officer we must never <wbr class="w480 w960"></wbr>lose sight of each person&#x2019;s <wbr class="w481 w961 w1799"></wbr>great qualities. We give <wbr class="w480 w960 w1800"></wbr>recognition and appreciation generously, and raise <wbr class="w480 w960"></wbr>issues <wbr class="w481 w961"></wbr>in a <wbr class="w1799"></wbr>respectful way that is easy for the guild <wbr class="w480 w960"></wbr>member <wbr class="w1800"></wbr>to take.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="805323f7-0d63-4218-ac74-e99a26fb7a6c" itemtype="text" diff_index="1" index="column" kind="stack" score="2.625" missed="0.375" tag="article" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c"><div kind="group" index="column" class="group column group column" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c-g-column-t-paragraph"><p><b data-grid-id="1d9e407d-d483-44ac-9ac8-260c15c06c8f">Willing to hear criticism and learn - </b>we make it easy <wbr class="w480 w960"></wbr>for people to express any <wbr class="w481 w961 w1799"></wbr>criticism and summarise to <wbr class="w480 w960 w1800"></wbr>show we&#x2019;ve heard what they have to say &#x2013; and take <wbr class="w481 w961"></wbr>this <wbr class="w480 w960 w1799"></wbr>away to reflect on. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s leaders we will work hard to adapt our <wbr class="w480 w960"></wbr>communication, approach and attitude - <wbr class="w481 w961 w1799"></wbr>both IC and <wbr class="w480 w960"></wbr>OOC to promote <wbr class="w1800"></wbr>positive growth for players.</p><p><b data-grid-id="8162aeea-d9df-46b2-95e7-23eafdff8471"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Know when not to act </b>&#x2013; trust those within Starlight. <wbr class="w480 w960"></wbr>This is often the hardest skill <wbr class="w481 w961"></wbr>to <wbr class="w1799"></wbr>learn; it&#x2019;s important <wbr class="w480 w960"></wbr>for <wbr class="w1800"></wbr>officers to have a light touch and to understand <wbr class="w480 w960"></wbr>how to <wbr class="w481 w961"></wbr>time <wbr class="w1799"></wbr>our actions, what we do publically and <wbr class="w480 w960"></wbr>privately, and <wbr class="w1800"></wbr>where we trust the guild <wbr class="w481 w961"></wbr>to work <wbr class="w1799"></wbr>out <wbr class="w480 w960"></wbr>good solutions.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading-t-headline-a">Starlight feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-3-l-one"></div><style id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-color">body{background-color: rgba(16, 36, 44, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-3-l-one"></div><style id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-color">body{background-color: rgba(16, 36, 44, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</svg></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large chapter stack mixed i first_chapter w_decoration w_cover w_media w_headline w_title w_paragraph w_text media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text stack mixed" itemid="5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968" itemtype="text" diff_index="0" index="mixed" kind="stack" score="4.75" missed="0.25" tag="article" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968"><div kind="group" index="mixed" class="group mixed group mixed" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed"><a kind="media" index="cover" class="vfld media cover media cover" specificity="0.25" itemprop="cover" max-width="983" max-height="746" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/2794068563b27ac350087d7198d384b96c31bdce.jpg" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover"><picture id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3ed2dccdff1c90f986753e2bef35b5fe/passthrough.jpg?height=615&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=810, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3ed2dccdff1c90f986753e2bef35b5fe/passthrough.jpg?height=615&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=810, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/df71c56dc02ab922b5d0500e35ce820e/passthrough.jpg?height=328&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=432, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ed4d282c08a5de926e5abf63db678223/passthrough.jpg?height=656&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=864 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3585fa3edc1db6e458e53b636e2cb4e2/passthrough.jpg?height=492&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=648, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/df71c56dc02ab922b5d0500e35ce820e/passthrough.jpg?height=328&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=432, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/ed4d282c08a5de926e5abf63db678223/passthrough.jpg?height=656&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=864 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e236e0d043f3af3bb110365c13f6e442/passthrough.jpg?height=481&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=633, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3c655971e622f9cfc8ebd9913ccb1d22/passthrough.jpg?height=746&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F2794068563b27ac350087d7198d384b96c31bdce.jpg&width=983 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline"><span class="text-decoration" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-headline-span">Expectations</span></h1><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-5d0f92e2-c0fc-4d0d-9f47-d25d4dd5e968-g-mixed-t-paragraph"><p><span class="first-letter">W</span><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>e, the officers of Starlight hold ourselves to <wbr class="w480 w960"></wbr>these standards</p><p><b data-grid-id="723c9aff-fa28-462a-b7fe-c9f467acf166"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Holding the community</b> - Our key role as an officer is <wbr class="w480 w960"></wbr>to make <wbr class="w481 w961 w1799"></wbr>members feel that Starlight is a safe <wbr class="w480 w960 w1800"></wbr>community, both in and out of character. <wbr class="w481 w961"></wbr>Officers <wbr class="w480 w960 w1799"></wbr>always need to ask themselves &#x201C;Does this situation <wbr class="w480 w960"></wbr>need me to <wbr class="w1800"></wbr>be an <wbr class="w481 w961"></wbr>officer or a <wbr class="w1799"></wbr>player, to resolve this <wbr class="w480 w960"></wbr>situation well?&#x201D; There will be situations where <wbr class="w481 w961"></wbr>we have <wbr class="w480 w960"></wbr>to set our <wbr class="w1799"></wbr>own <wbr class="w1800"></wbr>personal or in-character reactions to <wbr class="w480 w960"></wbr>one side, so that we <wbr class="w481 w961"></wbr>can defuse a situation. <wbr class="w1799"></wbr>We will also <wbr class="w480 w960"></wbr>always ensure that <wbr class="w1800"></wbr>while a storyline can be <wbr class="w481 w961"></wbr>negative, <wbr class="w480 w960"></wbr>the players should <wbr class="w1799"></wbr>always feel secure within Starlight.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b262be89-7ff7-4231-b8f7-a775e75c5d08" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08"><div kind="group" index="column" class="group column group column" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b262be89-7ff7-4231-b8f7-a775e75c5d08-g-column-t-paragraph"><p><b data-grid-id="e85d2a2b-b05c-4da6-ae12-5c25e345aaa4">United </b>- As officers we should actively share <wbr class="w480 w960"></wbr>knowledge, experiences and <wbr class="w481 w961 w1799"></wbr>information, so that we <wbr class="w480 w960"></wbr>are all acting <wbr class="w1800"></wbr>from a common basis of knowledge. As <wbr class="w480 w481 w960 w961"></wbr>officers <wbr class="w1799"></wbr>we need to be frank and upfront in arguing <wbr class="w480 w960"></wbr>our views among <wbr class="w1800"></wbr>ourselves <wbr class="w481 w961"></wbr>(eg in officer <wbr class="w1799"></wbr>chat), but <wbr class="w480 w960"></wbr>once a decision has been made we will all publicly <wbr class="w480 w960"></wbr>support <wbr class="w481 w961"></wbr>this as a member <wbr class="w1799"></wbr>of <wbr class="w1800"></wbr>the management team. <wbr class="w480 w960"></wbr>We will always build our fellow <wbr class="w481 w961"></wbr>officers and never <wbr class="w480 w960 w1799"></wbr>undermine their authority or <wbr class="w1800"></wbr>decisions by public <wbr class="w480 w960"></wbr>dissent. We <wbr class="w481 w961"></wbr>seek support within the <wbr class="w1799"></wbr>officer group <wbr class="w480 w960"></wbr>rather than take annoyances outside and <wbr class="w481 w961 w1800"></wbr>involving <wbr class="w480 w960"></wbr>guild members.</p><p><b data-grid-id="d61b34ab-31d7-482c-92a5-fba7eb536307"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Role-modelling the values of Starlight RP </b>- for <wbr class="w480 w960"></wbr>example, one of the core beliefs of <wbr class="w481 w961 w1799"></wbr>Starlight is that we <wbr class="w480 w960"></wbr>seek <wbr class="w1800"></wbr>roleplayers who are committed to character <wbr class="w480 w960"></wbr>development <wbr class="w481 w961"></wbr>and <wbr class="w1799"></wbr>to grow their characters. Our <wbr class="w480 w960"></wbr>characters should <wbr class="w1800"></wbr>model this behaviour.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="77f583b9-2354-4a26-8389-ca0c5671d433" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-77f583b9-2354-4a26-8389-ca0c5671d433"><div kind="group" index="column" class="group column group column" id="u-77f583b9-2354-4a26-8389-ca0c5671d433-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-77f583b9-2354-4a26-8389-ca0c5671d433-g-column-t-paragraph"><p><b data-grid-id="2c5d98c3-edab-401b-9f7e-6d819761baa7">Participating </b>- when online on the officer character, <wbr class="w480 w960"></wbr>s/he should always be <wbr class="w481 w961 w1799"></wbr>approachable IC and OOC. This <wbr class="w480 w960"></wbr>does <wbr class="w1800"></wbr>not mean that an officer should always be in <wbr class="w480 w481 w960 w961 w1799"></wbr>character, in a public place, but rather that s/he can be <wbr class="w480 w960"></wbr>reached.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t is expected that an officer regularly takes part in the <wbr class="w480 w960"></wbr>role-play within Starlight on <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>character s/he is an <wbr class="w480 w960 w1800"></wbr>officer with. Officers will also spend time on the ooc <wbr class="w480 w960"></wbr>work <wbr class="w481 w961"></wbr>needed <wbr class="w1799"></wbr>for the guild to thrive - for example, in <wbr class="w480 w960"></wbr>offline <wbr class="w1800"></wbr>discussions on recruitment <wbr class="w481 w961"></wbr>strategy, <wbr class="w480 w960 w1799"></wbr>disciplinary action, setting direction and making <wbr class="w480 w960"></wbr>choices. Every officer <wbr class="w481 w961 w1800"></wbr>needs to <wbr class="w1799"></wbr>express their view and <wbr class="w480 w960"></wbr>vote when needed.</p><p><b data-grid-id="eb7fb5eb-226a-474a-8a9f-d50d67306bd4"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Seeing the best in people &#x2013; </b>as officer we must never <wbr class="w480 w960"></wbr>lose sight of each person&#x2019;s <wbr class="w481 w961 w1799"></wbr>great qualities. We give <wbr class="w480 w960 w1800"></wbr>recognition and appreciation generously, and raise <wbr class="w480 w960"></wbr>issues <wbr class="w481 w961"></wbr>in a <wbr class="w1799"></wbr>respectful way that is easy for the guild <wbr class="w480 w960"></wbr>member <wbr class="w1800"></wbr>to take.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_decoration w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="805323f7-0d63-4218-ac74-e99a26fb7a6c" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c"><div kind="group" index="column" class="group column group column" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-805323f7-0d63-4218-ac74-e99a26fb7a6c-g-column-t-paragraph"><p><b data-grid-id="1d9e407d-d483-44ac-9ac8-260c15c06c8f">Willing to hear criticism and learn - </b>we make it easy <wbr class="w480 w960"></wbr>for people to express any <wbr class="w481 w961 w1799"></wbr>criticism and summarise to <wbr class="w480 w960 w1800"></wbr>show we&#x2019;ve heard what they have to say &#x2013; and take <wbr class="w481 w961"></wbr>this <wbr class="w480 w960 w1799"></wbr>away to reflect on. </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s leaders we will work hard to adapt our <wbr class="w480 w960"></wbr>communication, approach and attitude - <wbr class="w481 w961 w1799"></wbr>both IC and <wbr class="w480 w960"></wbr>OOC to promote <wbr class="w1800"></wbr>positive growth for players.</p><p><b data-grid-id="8162aeea-d9df-46b2-95e7-23eafdff8471"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Know when not to act </b>&#x2013; trust those within Starlight. <wbr class="w480 w960"></wbr>This is often the hardest skill <wbr class="w481 w961"></wbr>to <wbr class="w1799"></wbr>learn; it&#x2019;s important <wbr class="w480 w960"></wbr>for <wbr class="w1800"></wbr>officers to have a light touch and to understand <wbr class="w480 w960"></wbr>how to <wbr class="w481 w961"></wbr>time <wbr class="w1799"></wbr>our actions, what we do publically and <wbr class="w480 w960"></wbr>privately, and <wbr class="w1800"></wbr>where we trust the guild <wbr class="w481 w961"></wbr>to work <wbr class="w1799"></wbr>out <wbr class="w480 w960"></wbr>good solutions.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks uninverted vertical not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_decoration w_headline w_title w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-alternate-g-heading-t-headline-a">Starlight feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-desktop-l-one-3-l-one"></div><style id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-color">body{background-color: rgba(16, 36, 44, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-cinema-l-one-3-l-one"></div><style id="u-8fa047f6-bf1d-4c0b-9d4f-cc17069afee8-color">body{background-color: rgba(16, 36, 44, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1659,9 +1700,11 @@ global.Hamburger = require('./hamburger');
 
 global.Highlighter = require('./highlighter');
 
+global.Player = require('./player');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
+},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"./player":8,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
 var appendPage, mainpage, page, ref, ref1, urls;
 
 page = require('./reflow');
@@ -1762,7 +1805,192 @@ module.exports = function() {
 };
 
 
-},{"./reflow":8}],8:[function(require,module,exports){
+},{"./reflow":9}],8:[function(require,module,exports){
+var Player, Youtube, iframe, revealed, rgb2hex;
+
+iframe = null;
+
+Youtube = null;
+
+Player = function(id, src, width, height, color, bg) {
+  if (src.indexOf('youtube') > -1) {
+    src += '&color=white&theme=light&modestbranding=1';
+  }
+  src = src.replace('COLOR', color).replace('BG', bg);
+  if (location.protocol !== 'https:') {
+    src = src.replace('https:', 'http:');
+  }
+  iframe = document.createElement('iframe');
+  iframe.id = id;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.left = 0;
+  iframe.style.right = 0;
+  iframe.style.position = 'absolute';
+  iframe.style.opacity = 0.2;
+  iframe.onload = function() {
+    return iframe.style.opacity = 1;
+  };
+  return iframe;
+};
+
+revealed = null;
+
+Player.reveal = function(iframe) {
+  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
+  while (target = (target || iframe).parentNode) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (target.parentNode.classList.contains('group')) {
+        parent = target.parentNode;
+      } else {
+        parent = target;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
+      top = -play.offsetTop;
+      play.style.webkitTransformOrigin = 'top right';
+      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
+      target.classList.add('revealed');
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        if (sibling.nodeType === 1 && sibling !== parent) {
+          translateX = translateY = null;
+          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+            translateX = -diff;
+          }
+          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+              translateX = diff;
+            }
+          }
+          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+            translateY = -diff;
+          }
+          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+              translateY = diff;
+            }
+          }
+          if (Math.abs(translateX) > Math.abs(translateY)) {
+            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
+          } else {
+            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
+          }
+          console.log(translateX, translateY, sibling);
+        }
+      }
+    }
+  }
+};
+
+Player.hide = function(iframe) {
+  var i, len, parent, play, ref, ref1, sibling;
+  while (parent = (parent || iframe).parentNode) {
+    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
+      parent.classList.remove('revealed');
+      if (parent.parentNode.classList.contains('group')) {
+        parent = parent.parentNode;
+      }
+      play = parent.getElementsByClassName('play')[0];
+      play.style.webkitTransform = '';
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        sibling.style.webkitTransform = '';
+      }
+    }
+  }
+  return revealed = null;
+};
+
+window.addEventListener('resize', function() {
+  return setTimeout(function() {
+    return requestAnimationFrame(function() {
+      if (revealed) {
+        if (revealed.offsetWidth) {
+          return Player.reveal(revealed);
+        } else {
+          return Player.stop(revealed);
+        }
+      }
+    });
+  }, 10);
+});
+
+Player.stop = function(iframe) {
+  var old;
+  old = iframe;
+  iframe.style.opacity = 0;
+  setTimeout(function() {
+    var ref;
+    return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
+  }, 300);
+  Player.hide(iframe);
+  return iframe = null;
+};
+
+document.addEventListener('click', function(e) {
+  var bg, color, header, parent, play, ref, ref1, results, styles, target;
+  target = e.target;
+  results = [];
+  while (target) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (play = target.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+          Player.stop(iframe);
+        } else {
+          if (iframe) {
+            Player.stop(iframe);
+          }
+          color = bg = null;
+          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          parent = header || play;
+          while (parent) {
+            if (parent.nodeType === 1) {
+              styles = window.getComputedStyle(parent);
+              if (styles.color.indexOf('rgba') === -1 || !styles.color.match(/,\s*0\)/)) {
+                if (color == null) {
+                  color = styles.color;
+                }
+              }
+              if (styles['background-color'].indexOf('rgba') === -1 || !styles['background-color'].match(/,\s*0\)/)) {
+                if (bg == null) {
+                  bg = styles['background-color'];
+                }
+              }
+            }
+            parent = parent.parentNode;
+          }
+          iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
+          target.appendChild(iframe);
+          Player.reveal(iframe);
+        }
+        e.preventDefault();
+        break;
+      }
+    }
+    results.push(target = target.parentNode);
+  }
+  return results;
+});
+
+rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  if (rgb && rgb.length === 4) {
+    return ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2);
+  }
+};
+
+window.exports = window.Player = Player;
+
+
+},{}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
@@ -2027,7 +2255,7 @@ module.exports = function(callback) {
   } else {
     protocol = '';
   }
-  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.4/gss.document.parser.js";
+  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.8/gss.document.parser.js";
   if (location.toString().indexOf('//localhost:8080') > -1) {
     return module.exports.load(protocol + "//localhost:8080/node_modules/gss-document/dist/gss.document.parser.js", callback, function() {
       return module.exports.load(url, callback);
